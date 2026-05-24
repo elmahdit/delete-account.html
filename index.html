@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIBJOB - Demande de suppression de compte</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #2563eb;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        p {
+            color: #4b5563;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+        }
+        input[type="text"], input[type="tel"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+        .btn-submit {
+            background-color: #ef4444;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #dc2626;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>JIBJOB</h1>
+    <h3>Demande de suppression de compte</h3>
+    <p>Conformément aux règles de confidentialité, vous pouvez demander la suppression définitive de votre compte et de toutes vos données associées.</p>
+    
+    <!-- Vous pouvez lier ce formulaire à un service comme Formspree, Pageclip, ou simplement envoyer un mail -->
+    <form action="mailto:support@jibjob.app" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="phone">Numéro de téléphone associé au compte :</label>
+            <input type="tel" id="phone" name="Telephone" placeholder="Ex: +212600000000" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="reason">Raison de la suppression (optionnel) :</label>
+            <input type="text" id="reason" name="Raison" placeholder="Pourquoi souhaitez-vous nous quitter ?">
+        </div>
+        
+        <button type="submit" class="btn-submit">CONFIRMER LA SUPPRESSION</button>
+    </form>
+    
+    <div class="footer">
+        Les demandes sont traitées sous 48 heures ouvrées. Vos données seront définitivement purgées de nos bases Firestore et Firebase Auth.
+    </div>
+</div>
+
+</body>
+</html>
